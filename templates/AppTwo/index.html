@@ -1,0 +1,36 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>
+		first app
+	</title>
+	
+	</head>
+	<body>
+	<h1> hello this is index.html</h1>
+
+    <h2>here are your access users:</h2>
+
+    <div class="djangotwo">
+        {% if users %}
+        <table>
+            <thead>
+            <th>first name</th>
+            <th>last name</th>
+            <th>email</th>
+            </thead>
+        {% for user in  users %}
+            <tr>
+                <td>{{ user.first_name}}</td>
+                <td>{{ user.last_name}}</td>
+                <td>{{ user.email }}</td>
+            </tr>
+        {% endfor %}
+
+        </table>
+        {% else %}
+        <p>NO users FOUND!</p>
+        {% endif %}
+    </div>
+	</body>
+</html>
